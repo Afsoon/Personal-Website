@@ -1,0 +1,11 @@
+dist
+es
+lib
+ts
+coverage
+node_modules
+public
+.cache
+babel.config.js
+jest.config.js
+.eslintrc.js
