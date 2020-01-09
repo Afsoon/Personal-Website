@@ -37,7 +37,7 @@ const Header = () => {
       >
         <a
           href="/"
-          className="group self-center flex items-center flex-col sm:flex-row lg:flex-col pt-2 lg:p-4"
+          className="group text-support-positive-800 self-center flex items-center flex-col sm:flex-row lg:flex-col pt-2 lg:p-4"
         >
           <IconHome />
           <span className="sm:pl-3 lg:pl-0 group-hover:text-support-positive-800">
@@ -45,7 +45,7 @@ const Header = () => {
           </span>
         </a>
         <a
-          href="/"
+          href="/about"
           className="group self-center flex items-center flex-col sm:flex-row lg:flex-col pt-2 lg:p-4"
         >
           <IconUser />
@@ -54,7 +54,7 @@ const Header = () => {
           </span>
         </a>
         <a
-          href="/"
+          href="/skills"
           className="group self-center flex items-center flex-col sm:flex-row lg:flex-col pt-2 lg:p-4"
         >
           <IconGraphBar />
