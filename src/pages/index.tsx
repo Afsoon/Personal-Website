@@ -1,19 +1,28 @@
 import React, { useState } from 'react'
+import {
+  IconUser,
+  IconBriefcase,
+  IconBuilding,
+  IconGraphBar,
+  IconHome,
+  Github,
+  Linkedin,
+} from '../icons'
 import '../style.css'
-
-//`flex-full h-12 flex justify-between p-1 `
 
 const Header = () => {
   const [showOptions, setShowOptions] = useState(false)
   const display = showOptions ? 'flex' : 'hidden'
   return (
-    <header className="bg-primary-800 text-white flex flex-wrap md:flex-no-wrap lg:flex-col lg:w-24 lg:flex-full">
+    <header className="bg-primary-700 text-white flex flex-wrap md:flex-no-wrap md:items-center lg:flex-col lg:w-24 lg:flex-auto lg:items-stretch">
       <div className="flex flex-full md:flex-none md:flex-col">
-        <img
-          src="/logo.png"
-          alt="Logo of the web is a s"
-          className="bg-primary-900 p-1"
-        />
+        <a
+          href="/"
+          className="bg-primary-900 flex flex-col items-center p-1 lg:pt-1 lg:pb-1"
+        >
+          <img src="/logo.png" alt="Logo of the website" />
+          <span className="font-bold text-xl">Said</span>
+        </a>
         <button
           className="ml-auto p-1 md:hidden"
           onClick={() => {
@@ -26,28 +35,58 @@ const Header = () => {
       <nav
         className={`h-12 justify-between p-1 flex-full ${display} md:flex md:justify-around  md:flex-1 lg:flex lg:flex-col lg:justify-center`}
       >
-        <a href="/" className="self-center lg:h-12">
-          Home
+        <a
+          href="/"
+          className="group self-center flex items-center lg:flex-col lg:p-4"
+        >
+          <IconHome />
+          <span className="pl-3 lg:pl-0 group-hover:text-support-positive-800">
+            Home
+          </span>
         </a>
-        <a href="/" className="self-center lg:h-12">
-          About
+        <a
+          href="/"
+          className="group self-center flex items-center lg:flex-col lg:p-4"
+        >
+          <IconUser />
+          <span className="pl-3 lg:pl-0 group-hover:text-support-positive-800">
+            About
+          </span>
         </a>
-        <a href="/" className="self-center lg:h-12">
-          Skills
+        <a
+          href="/"
+          className="group self-center flex items-center lg:flex-col lg:p-4"
+        >
+          <IconGraphBar />
+          <span className="pl-3 lg:pl-0 group-hover:text-support-positive-800">
+            Skills
+          </span>
         </a>
-        <a href="/" className="self-center lg:h-12">
-          Experience
+        <a
+          href="/"
+          className="group self-center flex items-center lg:flex-col lg:p-4"
+        >
+          <IconBuilding />
+          <span className="pl-3 lg:pl-0 group-hover:text-support-positive-800">
+            Experience
+          </span>
         </a>
-        <a href="/" className="self-center lg:h-12">
-          Projects
+        <a
+          href="/"
+          className="group self-center flex items-center lg:flex-col lg:p-4"
+        >
+          <IconBriefcase />
+          <span className="pl-3 lg:pl-0 group-hover:text-support-positive-800">
+            Projects
+          </span>
         </a>
       </nav>
-      <nav className="bg-support-success-900 hidden lg:flex lg:flex-col lg:flex-1/10 lg:p-1 lg:justify-around">
-        <a href="/" className="md:self-center md:h-12">
-          Linkedin
+      <nav className="hidden lg:flex lg:flex-col lg:flex-1/10 lg:p-1 lg:justify-around">
+        <a href="/" className="lg:self-center lg:h-12">
+          <Github />
         </a>
-        <a href="/" className="md:self-center md:h-12">
-          Github
+        <a href="/" className="lg:self-center lg:h-12">
+          <Linkedin />
         </a>
       </nav>
     </header>
@@ -55,9 +94,9 @@ const Header = () => {
 }
 
 const Home = () => (
-  <div className="h-screen w-screen lg:flex lg:flex-col lg:flex-wrap">
+  <div className="h-screen w-screen flex flex-col lg:flex-row">
     <Header />
-    <div>CONTENT</div>
+    <div className="bg-primary-500 flex-full">CONTENT</div>
   </div>
 )
 
