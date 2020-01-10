@@ -15,7 +15,7 @@ module.exports = {
       'min-content': 'min-content',
       '64': '16rem'
     },
-    flex: Object.assign({}, flex, {'full': '0 0 100%', '1/10': '0 0 10%'}),
+    flex: Object.assign({}, flex, {'full': '0 0 100%', '1/10': '0 0 10%', '3/10': '0 0 33%'}),
     colors: {
       white: colors.white,
       black: colors.black,

@@ -5,3 +5,7 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.hyphens-auto {
+  hyphens: auto;
+}
