@@ -105,6 +105,8 @@ const skills = {
   PostCSS: 1,
   SASS: 2,
   Kong: 2,
+  GraphQL: 1,
+  Rest: 3,
 }
 
 const generalSkills = [
