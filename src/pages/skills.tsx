@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import {
   IconUser,
   IconBriefcase,
-  IconBuilding,
   IconGraphBar,
   IconHome,
   Github,
@@ -14,7 +13,7 @@ const Header = () => {
   const [showOptions, setShowOptions] = useState(false)
   const display = showOptions ? 'flex' : 'hidden'
   return (
-    <header className="bg-primary-700 text-white flex flex-wrap md:flex-no-wrap md:items-center lg:flex-col lg:w-24 lg:flex-auto lg:items-stretch">
+    <header className="sticky top-0 bg-primary-700 text-white flex flex-wrap md:flex-no-wrap md:items-center lg:flex-col lg:w-24 lg:flex-auto lg:flex-grow-0 lg:flex-shrink-0 lg:items-stretch">
       <div className="flex flex-full md:flex-none md:flex-col">
         <a
           href="/"
@@ -66,15 +65,6 @@ const Header = () => {
           href="/"
           className="group self-center flex items-center flex-col sm:flex-row lg:flex-col pt-2 lg:p-4"
         >
-          <IconBuilding />
-          <span className="sm:pl-3 lg:pl-0 group-hover:text-support-positive-800">
-            Experience
-          </span>
-        </a>
-        <a
-          href="/"
-          className="group self-center flex items-center flex-col sm:flex-row lg:flex-col pt-2 lg:p-4"
-        >
           <IconBriefcase />
           <span className="sm:pl-3 lg:pl-0 group-hover:text-support-positive-800">
             Projects
@@ -93,65 +83,114 @@ const Header = () => {
   )
 }
 
-const SkillsContent = () => (
-  <div className="bg-primary-600 flex-full text-white flex-wrap pt-10 pl-4 text-4xl lg:text-6xl lg:p-16 lg:items-center">
-    <h1 className="text-support-positive-800">Skills & Experience</h1>
-    <ul className="flex flex-wrap lg:text-3xl md:justify-between">
-      <li className="flex flex-full items-center md:flex-none">
-        <span className="pr-2">Kotlin:</span>
-        <svg height="24" width="24">
-          <circle
-            cx="12"
-            cy="12"
-            r="8"
-            className="fill-current text-neutral-900"
-          />
-        </svg>
-        <svg height="24" width="24">
-          <circle
-            cx="12"
-            cy="12"
-            r="8"
-            className="fill-current text-neutral-900"
-          />
-        </svg>
-        <svg height="24" width="24">
-          <circle
-            cx="12"
-            cy="12"
-            r="8"
-            className="fill-current text-neutral-900"
-          />
-        </svg>
-        <svg height="24" width="24">
-          <circle
-            cx="12"
-            cy="12"
-            r="8"
-            className="fill-current text-neutral-050"
-          />
-        </svg>
-        <svg height="24" width="24">
-          <circle
-            cx="12"
-            cy="12"
-            r="8"
-            className="fill-current text-neutral-050"
-          />
-        </svg>
-      </li>
-      <li className="flex items-center">
-        <span className="pr-2">Javascript:</span>
-        <svg height="24" width="24">
-          <circle cx="12" cy="12" r="8" fill="red" />
-        </svg>
-      </li>
-    </ul>
-  </div>
+const skills = {
+  Kotlin: 2,
+  Clojure: 3,
+  ClojureScript: 2,
+  HTML: 3,
+  CSS: 2,
+  'Functional Programming': 2,
+  Git: 3,
+  TypeScript: 2,
+  JavaScript: 3,
+  React: 3,
+  NodeJS: 2,
+  TailwindCSS: 3,
+  Elixir: 2,
+  PostgreSQL: 2,
+  Docker: 2,
+  Serverless: 2,
+  'AWS Lambda': 2,
+  NextJS: 2,
+  PostCSS: 1,
+  SASS: 2,
+  Kong: 2,
+}
+
+const generalSkills = [
+  'TDD',
+  'Kanban',
+  'CI',
+  'CD',
+  'Gitflow',
+  'Monorepo Projects',
+  'Multirepo Projects',
+  'Microservices',
+  'SOLID',
+]
+
+const SkillWithScore = ({ skill, value }: { skill: string; value: number }) => {
+  const values = [...Array(5).keys()]
+    .map(key => {
+      return key + 1
+    })
+    .map(key => {
+      if (key === value) {
+        return (
+          <span
+            key={`${skill}+${key}`}
+            className="pl-1 pr-1 text-support-positive-800"
+          >
+            {value}
+          </span>
+        )
+      } else {
+        return (
+          <span
+            key={`${skill}+${key}`}
+            className="pl-1 pr-1 text-xl text-primary-300"
+          >
+            {key}
+          </span>
+        )
+      }
+    })
+  return (
+    <li className="pt-1 col-span-2 flex flex-full items-baseline md:flex-none">
+      <span className="pr-2 leading-tight text-xl">{skill}:</span>
+      {values}
+    </li>
+  )
+}
+
+const SkillWithoutScore = ({ skill }: { skill: string }) => (
+  <li className="pt-1 col-span-2 flex flex-full items-baseline md:flex-none">
+    <span className="pr-2 leading-tight text-xl">{skill}</span>
+  </li>
 )
 
+const SkillsContent = () => {
+  const TechnicalSkills = Object.entries(skills).map(
+    ([skill, value], index) => {
+      return <SkillWithScore skill={skill} value={value} key={index} />
+    }
+  )
+
+  const GeneralSkills = generalSkills.map(skill => {
+    return <SkillWithoutScore skill={skill} />
+  })
+
+  return (
+    <div className="bg-primary-600 flex-full lg:flex-auto text-white flex-wrap pt-10 pl-4 pb-2 text-4xl lg:text-6xl lg:p-6 ">
+      <h1 className="text-support-positive-800">Skills</h1>
+      <h2 className="text-3xl text-support-success-050">Technical Skills</h2>
+      <h3 className="text-base text-primary-400">
+        Donde 1 significa usado en proyecto propios y 5 significa dominio alto.
+      </h3>
+      <ul className="md:grid md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-12 lg:text-3xl md:justify-between">
+        {TechnicalSkills}
+      </ul>
+      <br />
+      <h2 className="text-3xl text-support-success-050">General Skills</h2>
+      <ul className="md:grid md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-12 lg:text-3xl md:justify-between">
+        {GeneralSkills}
+      </ul>
+    </div>
+  )
+}
+
 const Skills = () => (
-  <div className="h-screen w-screen overflow-hidden flex flex-col lg:flex-row">
+  <div className="h-screen w-screen overflow-auto flex flex-col lg:flex-row">
     <Header />
     <SkillsContent />
   </div>

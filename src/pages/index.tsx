@@ -14,7 +14,7 @@ const Header = () => {
   const [showOptions, setShowOptions] = useState(false)
   const display = showOptions ? 'flex' : 'hidden'
   return (
-    <header className="bg-primary-700 text-white flex flex-wrap md:flex-no-wrap md:items-center lg:flex-col lg:w-24 lg:flex-auto lg:items-stretch">
+    <header className="bg-primary-700 text-white flex flex-wrap md:flex-no-wrap md:items-center lg:flex-col lg:w-24 lg:flex-auto lg:flex-grow-0 lg:flex-shrink-0 lg:items-stretch">
       <div className="flex flex-full md:flex-none md:flex-col">
         <a
           href="/"
@@ -94,7 +94,7 @@ const Header = () => {
 }
 
 const HomeContent = () => (
-  <div className="bg-primary-600 flex-full text-white flex flex-wrap pt-10 pl-4 text-4xl lg:text-6xl lg:p-16 lg:items-center">
+  <div className="bg-primary-600 flex-full lg:flex-auto text-white flex-wrap pt-10 pl-4 text-4xl lg:text-6xl lg:p-6 lg:flex lg:items-center">
     <div className="flex flex-col">
       <div>
         <span className="hover:text-support-positive-800 cursor-default">
