@@ -62,7 +62,7 @@ const Header = () => {
           </span>
         </a>
         <a
-          href="/"
+          href="/projects"
           className="group self-center flex items-center flex-col sm:flex-row lg:flex-col pt-2 lg:p-4"
         >
           <IconBriefcase />
