@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import {
   IconUser,
   IconBriefcase,
+  IconBuilding,
   IconGraphBar,
   IconHome,
   Github,
@@ -59,6 +60,15 @@ const Header = () => {
           <IconGraphBar />
           <span className="sm:pl-3 lg:pl-0 group-hover:text-support-positive-800">
             Skills
+          </span>
+        </a>
+        <a
+          href="/experience"
+          className="group self-center flex items-center flex-col sm:flex-row lg:flex-col pt-2 lg:p-4"
+        >
+          <IconBuilding />
+          <span className="sm:pl-3 lg:pl-0 group-hover:text-support-positive-800">
+            Experience
           </span>
         </a>
         <a
