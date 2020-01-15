@@ -93,31 +93,31 @@ const Header = () => {
   )
 }
 
-const skills = {
-  Kotlin: 2,
-  Clojure: 3,
-  ClojureScript: 2,
-  HTML: 3,
-  CSS: 2,
-  'Functional Programming': 2,
-  Git: 3,
-  TypeScript: 2,
-  JavaScript: 3,
-  React: 3,
-  NodeJS: 2,
-  TailwindCSS: 3,
-  Elixir: 2,
-  PostgreSQL: 2,
-  Docker: 2,
-  Serverless: 2,
-  'AWS Lambda': 2,
-  NextJS: 2,
-  PostCSS: 1,
-  SASS: 2,
-  Kong: 2,
-  GraphQL: 1,
-  Rest: 3,
-}
+const skills = [
+  'Kotlin',
+  'Clojure',
+  'ClojureScript',
+  'HTML',
+  'CSS',
+  'Functional Programming',
+  'Git',
+  'TypeScript',
+  'JavaScript',
+  'React',
+  'NodeJS',
+  'TailwindCSS',
+  'Elixir',
+  'PostgreSQL',
+  'Docker',
+  'Serverless',
+  'AWS Lambda',
+  'NextJS',
+  'PostCSS',
+  'SASS',
+  'Kong',
+  'GraphQL',
+  'Rest',
+]
 
 const generalSkills = [
   'TDD',
@@ -129,66 +129,28 @@ const generalSkills = [
   'Multirepo Projects',
   'Microservices',
   'SOLID',
+  'Jira',
 ]
 
-const SkillWithScore = ({ skill, value }: { skill: string; value: number }) => {
-  const values = [...Array(5).keys()]
-    .map(key => {
-      return key + 1
-    })
-    .map(key => {
-      if (key === value) {
-        return (
-          <span
-            key={`${skill}+${key}`}
-            className="pl-1 pr-1 text-support-positive-800"
-          >
-            {value}
-          </span>
-        )
-      } else {
-        return (
-          <span
-            key={`${skill}+${key}`}
-            className="pl-1 pr-1 text-xl text-primary-300"
-          >
-            {key}
-          </span>
-        )
-      }
-    })
-  return (
-    <li className="pt-1 col-span-2 flex flex-full items-baseline md:flex-none">
-      <span className="pr-2 leading-tight text-xl">{skill}:</span>
-      {values}
-    </li>
-  )
-}
-
-const SkillWithoutScore = ({ skill }: { skill: string }) => (
+const SkillCard = ({ skill }: { skill: string }) => (
   <li className="pt-1 col-span-2 flex flex-full items-baseline md:flex-none">
     <span className="pr-2 leading-tight text-xl">{skill}</span>
   </li>
 )
 
 const SkillsContent = () => {
-  const TechnicalSkills = Object.entries(skills).map(
-    ([skill, value], index) => {
-      return <SkillWithScore skill={skill} value={value} key={index} />
-    }
-  )
+  const TechnicalSkills = skills.map((skill, index) => {
+    return <SkillCard skill={skill} key={`${index}-${skill}`} />
+  })
 
-  const GeneralSkills = generalSkills.map(skill => {
-    return <SkillWithoutScore skill={skill} />
+  const GeneralSkills = generalSkills.map((skill, index) => {
+    return <SkillCard skill={skill} key={`${index}-${skill}`} />
   })
 
   return (
     <div className="bg-primary-600 flex-full lg:flex-auto text-white flex-wrap pt-10 pl-4 pb-2 text-4xl lg:text-6xl lg:p-6 ">
       <h1 className="text-support-positive-800">Skills</h1>
       <h2 className="text-3xl text-support-success-050">Technical Skills</h2>
-      <h3 className="text-base text-primary-400">
-        Donde 1 significa usado en proyecto propios y 5 significa dominio alto.
-      </h3>
       <ul className="md:grid md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-12 lg:text-3xl md:justify-between">
         {TechnicalSkills}
       </ul>
