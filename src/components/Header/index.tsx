@@ -14,12 +14,13 @@ const isActualPathname = (value: string, pathname: string) => {
   return value === pathname
 }
 
+/**https://github.com/philipwalton/flexbugs/issues/271 flex-shrink-0 why I have that */
 const Header = () => {
   const [showOptions, setShowOptions] = useState(false)
   const router = useRouter()
   const display = showOptions ? 'flex' : 'hidden'
   return (
-    <header className="sticky top-0 bg-primary-700 text-white flex flex-wrap md:flex-no-wrap md:items-center lg:flex-col lg:w-24 lg:flex-auto lg:flex-grow-0 lg:flex-shrink-0 lg:items-stretch">
+    <header className="flex-shrink-0 bg-primary-700 text-white flex flex-wrap md:flex-no-wrap md:items-center lg:flex-col lg:w-24 lg:flex-auto lg:flex-grow-0 lg:flex-shrink-0 lg:items-stretch">
       <div className="flex flex-full md:flex-none md:flex-col">
         <a
           href="/"
