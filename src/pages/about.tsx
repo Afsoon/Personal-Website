@@ -21,7 +21,7 @@ const AboutContent = () => (
       </p>
     </div>
     <div className="flex-3/10 pb-4">
-      <h2 className="text-3xl text-support-success-050 pl-2">Education</h2>
+      <h2 className="text-3xl text-support-success-050 pl-2">Estudios</h2>
       <ul className="pl-4">
         <li className="pt-4">
           <span className="text-2xl block">
@@ -46,29 +46,44 @@ const AboutContent = () => (
           <p className="pt-4 pl-2 text-primary-200">
             Code retreat para mejorar mis habilidad de programación y soft
             skills realizando un proyecto open source. Durante estos 9 meses se
-            desarrolló el juego <a href="/">Game Voting</a>.
+            desarrolló el juego{' '}
+            <a
+              href="https://github.com/Afsoon/GameVoting"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Game Voting
+            </a>
+            .
           </p>
         </li>
       </ul>
     </div>
     <div className="flex-3/10 pb-4">
-      <h2 className="text-2xl text-support-success-050 pl-2 pt-4">Languages</h2>
+      <h2 className="text-2xl text-support-success-050 pl-2 pt-4">Idiomas</h2>
       <ul className="pl-4">
         <li className="pt-4">
-          <span className="text-2xl">Spanish -</span>
-          <span className="pl-2">Native</span>
+          <span className="text-2xl">Español -</span>
+          <span className="pl-2">Nativo</span>
         </li>
         <li className="pt-4">
-          <span className="text-2xl">English -</span>
+          <span className="text-2xl">Inglés -</span>
           <span className="pl-2">B1</span>
         </li>
       </ul>
       <h3 className="text-2xl text-support-success-050 pl-2 pt-4">
-        Self Study
+        Autoaprendizaje
       </h3>
       <ul className="pl-4">
         <li className="pt-4 text-2xl">
-          <a href="/">Frontend Masters</a>
+          <a
+            href="https://frontendmasters.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Frontend Masters
+          </a>
         </li>
       </ul>
     </div>
