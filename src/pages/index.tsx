@@ -63,7 +63,7 @@ const Header = () => {
           </span>
         </a>
         <a
-          href="/"
+          href="/experience"
           className="group self-center flex items-center flex-col sm:flex-row lg:flex-col pt-2 lg:p-4"
         >
           <IconBuilding />
@@ -93,110 +93,54 @@ const Header = () => {
   )
 }
 
-const HomeContent = () => (
-  <div className="bg-primary-600 flex-full lg:flex-auto text-white flex-wrap pt-10 pl-4 text-4xl lg:text-6xl lg:p-6 lg:flex lg:items-center">
-    <div className="flex flex-col">
-      <div>
-        <span className="hover:text-support-positive-800 cursor-default">
-          H
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          i
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          ,
-        </span>
-      </div>
-      <div>
-        <span className="hover:text-support-positive-800 cursor-default">
-          I
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          '
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          m
-        </span>
-        &nbsp;
-        <span className="hover:text-support-positive-800 cursor-default">
-          S
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          a
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          i
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          d
-        </span>
+const introductionText = 'Hola, Soy Said, Software Developer.'
+
+const eachCharacterAsSpan = (character: string, index: number) => {
+  return (
+    <span
+      className="hover:text-support-positive-800 cursor-default"
+      key={`${character}-${index}`}
+    >
+      {character}
+    </span>
+  )
+}
+
+const eachPhraseInsideOfADiv = (
+  characters: JSX.Element[],
+  index: number,
+  array: JSX.Element[][]
+) => {
+  return (
+    <div key={index}>
+      {characters}
+      {index < array.length - 1 && (
         <span className="hover:text-support-positive-800 cursor-default">
           ,
         </span>
-      </div>
-      <div>
-        <span className="hover:text-support-positive-800 cursor-default">
-          S
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          o
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          f
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          t
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          w
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          a
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          r
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          e
-        </span>
-        &nbsp;
-        <span className="hover:text-support-positive-800 cursor-default">
-          D
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          e
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          v
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          e
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          l
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          o
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          p
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          e
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          r
-        </span>
-        <span className="hover:text-support-positive-800 cursor-default">
-          .
-        </span>
-      </div>
-      <span className="text-lg text-primary-400">
-        Front End Developer / Back End Developer
-      </span>
+      )}
     </div>
-  </div>
-)
+  )
+}
+
+const HomeContent = () => {
+  const introductionTextAsHTML = introductionText
+    .split(',')
+    .map(value => {
+      return value.split('').map(eachCharacterAsSpan)
+    })
+    .map(eachPhraseInsideOfADiv)
+  return (
+    <div className="bg-primary-600 flex-full lg:flex-auto text-white flex-wrap pt-10 pl-4 text-4xl lg:text-6xl lg:p-6 lg:flex lg:items-center">
+      <div className="flex flex-col">
+        {introductionTextAsHTML}
+        <span className="text-lg text-primary-400">
+          Front End Developer / Back End Developer
+        </span>
+      </div>
+    </div>
+  )
+}
 
 const Home = () => (
   <div className="h-screen w-screen overflow-hidden flex flex-col lg:flex-row">
