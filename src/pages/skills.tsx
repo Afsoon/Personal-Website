@@ -58,13 +58,17 @@ const SkillsContent = () => {
 
   return (
     <div className="bg-primary-600 flex-full lg:flex-auto text-white flex-wrap pt-10 pl-4 pb-2 text-4xl lg:text-6xl lg:p-6 ">
-      <h1 className="text-support-positive-800">Skills</h1>
-      <h2 className="text-3xl text-support-success-050">Technical Skills</h2>
+      <h1 className="text-support-positive-800">Habilidades</h1>
+      <h2 className="text-3xl text-support-success-050">
+        Conocimientos técnicos
+      </h2>
       <ul className="md:grid md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-12 lg:text-3xl md:justify-between">
         {TechnicalSkills}
       </ul>
       <br />
-      <h2 className="text-3xl text-support-success-050">General Skills</h2>
+      <h2 className="text-3xl text-support-success-050">
+        Conocimientos transversales
+      </h2>
       <ul className="md:grid md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-12 lg:text-3xl md:justify-between">
         {GeneralSkills}
       </ul>
