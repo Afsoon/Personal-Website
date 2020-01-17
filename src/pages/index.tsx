@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import LayoutPage from '../components/Layout'
 
-const introductionText = 'Hola, Soy Said, Software Developer.'
+const introductionText = 'Hola 👋, Soy Said, Software Developer.'
 
 const eachCharacterAsSpan = (character: string, index: number) => {
   return (

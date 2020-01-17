@@ -9,7 +9,6 @@ const skills = [
   'HTML',
   'CSS',
   'Functional Programming',
-  'Git',
   'TypeScript',
   'JavaScript',
   'React',
@@ -29,7 +28,9 @@ const skills = [
 ]
 
 const generalSkills = [
+  'Git',
   'TDD',
+  'Scrum',
   'Kanban',
   'CI',
   'CD',

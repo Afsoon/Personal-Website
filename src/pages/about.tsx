@@ -28,7 +28,7 @@ const AboutContent = () => (
             Universidad Rey Juan Carlos/ Grado de Ingeniería Informática
           </span>
           <span className="text-sm block text-primary-400">
-            September 2012 - Actual, Mostoles
+            Septiembre 2012 - Actual, Móstoles
           </span>
           <p className="pt-4 pl-2 text-primary-200">
             En este momento, me encuentro desarrollando el proyecto de fin de
@@ -41,7 +41,7 @@ const AboutContent = () => (
         <li className="pt-4">
           <span className="text-2xl block">H4ckademy</span>
           <span className="text-sm block text-primary-400">
-            October 2015 - December 2015, Madrid
+            Octubre 2015 - Diciembre 2015, Madrid
           </span>
           <p className="pt-4 pl-2 text-primary-200">
             Code retreat para mejorar mis habilidad de programación y soft

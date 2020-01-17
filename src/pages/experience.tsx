@@ -9,7 +9,7 @@ const ExperienceContent = () => (
       <li className="pt-4 md:flex-1/2 lg:flex-3/10">
         <h2 className="text-3xl block">Software Developer - Ride On</h2>
         <span className="text-sm block text-primary-400">
-          June 2017 - May 2019, Madrid
+          Junio 2017 - Mayo 2019, Madrid
         </span>
         <ul className="list-inside list-disc pl-2">
           <li className="pt-2">
@@ -30,8 +30,8 @@ const ExperienceContent = () => (
           </li>
           <li className="pt-2">
             Mejora del rendimiento de la plataforma a nivel de base de datos,
-            donde determinadas queries de inserción y búsqueda tardaban varios
-            segundos en ejecutarse.
+            donde determinadas queries de inserción y búsqueda pasaron de tardar
+            1 - 2 segundos a menos de 1 segundo.
           </li>
           <li className="pt-2">
             Mejora del tiempo de comprobación de si un anclaje estaba libre de 2
@@ -42,7 +42,7 @@ const ExperienceContent = () => (
             todos los anclajes y estaciones en Redis.
           </li>
           <li className="pt-2">
-            Escribir una guía de cómo desarrollar en local un Lambda con
+            Escribir una guía de cómo desarrollar en local una Lambda con
             Localstack.
           </li>
           <li className="pt-2">
@@ -51,12 +51,12 @@ const ExperienceContent = () => (
             Kong, Konga, Keycloak, Localstack y Redis.
           </li>
           <li className="pt-2">
-            Implementación de un Back For Frontend en Kotlin con Spring Boot
-            para el nuevo dashboard de mantenimiento y la aplicación de Android,
+            Desarrollo de un Back For Frontend en Kotlin con Spring Boot para el
+            nuevo dashboard de mantenimiento y la aplicación de Android,
             incluyendo el diseño de la API REST para ambos clientes.
           </li>
           <li className="pt-2">
-            Implementación de un microservicio en Kotlin con Spring Boot para el
+            Desarrollo de un microservicio en Kotlin con Spring Boot para el
             sistema de gestión de incidencias de mantenimiento.
           </li>
           <li className="pt-2">
@@ -88,7 +88,7 @@ const ExperienceContent = () => (
           Programador Junior- Indizen Technology & Business Confluence
         </h2>
         <span className="text-sm block text-primary-400">
-          January 2016 - November 2016, Madrid
+          Enero 2016 - Noviembre 2016, Madrid
         </span>
         <p className="pt-4 pl-2 text-primary-300">
           <span className="font-bold text-white">
@@ -110,7 +110,7 @@ const ExperienceContent = () => (
             modernización del sistema de facturación
           </span>{' '}
           de una empresa energética​. Desarrollado con
-          <span className="font-bold text-white"> Java 5</span>,
+          <span className="font-bold text-white"> Java 8</span>,
           <span className="font-bold text-white"> Javascript</span>,
           <span className="font-bold text-white"> OracleDB</span>,
           <span className="font-bold text-white"> WebLogic</span>,
