@@ -70,7 +70,7 @@ const SkillsContent = () => {
       <h2 className="text-3xl text-support-success-050">
         Conocimientos transversales
       </h2>
-      <ul className="md:grid md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-12 lg:text-3xl md:justify-between">
+      <ul className="pb-4 lg:pb-0 md:grid md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-12 lg:text-3xl md:justify-between">
         {GeneralSkills}
       </ul>
     </main>
