@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 import App from 'next/app'
 import Head from 'next/head'
@@ -9,6 +10,7 @@ class MyApp extends App {
     return (
       <React.Fragment>
         <Head>
+          <title>👋 Said Atrahouch </title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
         <Component {...pageProps} />
