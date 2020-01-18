@@ -4,7 +4,12 @@ import LayoutPage from '../components/Layout'
 
 const PersonalWebsiteProject = () => (
   <li className="md:inline-block pt-4 md:pt-0 col-span-3 shadow-2xl">
-    <a href="/" className="group">
+    <a
+      href="https://github.com/Afsoon/Personal-Website"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group"
+    >
       <figure>
         <picture>
           <img
