@@ -9,6 +9,7 @@ This is the first version, it has the minimum to make it public, the following s
 - [x] CD with Now.
 - [ ] English texts and I18n.
 - [ ] Responsive images for side projects.
+- [ ] Create the preview for the social media and sharing.
 - [ ] Improve the current design.
 - [ ] A11y.
 
