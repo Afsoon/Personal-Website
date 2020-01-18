@@ -20,7 +20,7 @@ const HomeContent = () => {
     return value.split('').map(eachCharacterAsSpan)
   })
   return (
-    <div className="bg-primary-600 flex-full lg:flex-auto text-white flex-wrap pt-10 pl-4 text-4xl lg:text-6xl lg:p-6 lg:flex lg:items-center">
+    <main className="bg-primary-600 flex-full lg:flex-auto text-white flex-wrap pt-10 pl-4 text-4xl lg:text-6xl lg:p-6 lg:flex lg:items-center">
       <div className="flex flex-col">
         <div>
           {introductionTextAsHTML[0]}{' '}
@@ -42,7 +42,7 @@ const HomeContent = () => {
           Front End Developer / Back End Developer
         </span>
       </div>
-    </div>
+    </main>
   )
 }
 

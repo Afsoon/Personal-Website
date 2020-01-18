@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import LayoutPage from '../components/Layout'
 
 const ExperienceContent = () => (
-  <div className="bg-primary-600 flex-full lg:flex-auto text-white flex-wrap pt-10 pl-4 lg:p-6 lg:block lg:items-start lg:justify-between lg:leading-relaxed lg:overflow-auto text-left hyphens-auto">
+  <main className="bg-primary-600 flex-full lg:flex-auto text-white flex-wrap pt-10 pl-4 lg:p-6 lg:block lg:items-start lg:justify-between lg:leading-relaxed lg:overflow-auto text-left hyphens-auto">
     <h1 className="text-6xl text-support-positive-800">Experiencia Laboral</h1>
     <ol className="block md:flex pl-4 pr-4 pb-4">
       <li className="pt-4 md:flex-1/2 lg:flex-3/10">
@@ -119,7 +119,7 @@ const ExperienceContent = () => (
         </p>
       </li>
     </ol>
-  </div>
+  </main>
 )
 
 const Experience = () => (

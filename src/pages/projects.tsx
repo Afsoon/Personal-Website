@@ -33,14 +33,14 @@ const PersonalWebsiteProject = () => (
 )
 
 const ProjectsContent = () => (
-  <div className="bg-primary-600 flex-full lg:flex-auto text-white flex-wrap pt-10 pl-4 pr-4 lg:p-6 lg:overflow-auto">
+  <main className="bg-primary-600 flex-full lg:flex-auto text-white flex-wrap pt-10 pl-4 pr-4 lg:p-6 lg:overflow-auto">
     <h1 className="text-4xl lg:text-6xl text-support-positive-800">
       Proyectos
     </h1>
     <ul className="block md:grid md:gap-4 md:grid-cols-6 lg:grid-cols-9 xl:grid-cols-12 xl:pt-4">
       <PersonalWebsiteProject />
     </ul>
-  </div>
+  </main>
 )
 
 const Projects = () => (

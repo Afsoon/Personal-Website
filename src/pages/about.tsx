@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import LayoutPage from '../components/Layout'
 
 const AboutContent = () => (
-  <div className="bg-primary-600 flex-full lg:flex-auto text-white flex-wrap pr-4 pt-10 pl-4 lg:p-6 lg:flex lg:items-start lg:justify-between lg:leading-relaxed lg:overflow-auto text-left hyphens-auto">
+  <main className="bg-primary-600 flex-full lg:flex-auto text-white flex-wrap pr-4 pt-10 pl-4 lg:p-6 lg:flex lg:items-start lg:justify-between lg:leading-relaxed lg:overflow-auto text-left hyphens-auto">
     <div className="flex-3/10 pb-4">
       <h1 className="text-6xl text-support-positive-800">Sobre mí</h1>
       <p className="pt-4">
@@ -87,7 +87,7 @@ const AboutContent = () => (
         </li>
       </ul>
     </div>
-  </div>
+  </main>
 )
 
 const About = () => (
