@@ -14,7 +14,7 @@ const isActualPathname = (value: string, pathname: string) => {
   return value === pathname
 }
 
-/**https://github.com/philipwalton/flexbugs/issues/271 flex-shrink-0 why I have that */
+/**https://github.com/philipwalton/flexbugs/issues/271 flex-shrink-0 why I have to do that */
 const Header = () => {
   const [showOptions, setShowOptions] = useState(false)
   const router = useRouter()
