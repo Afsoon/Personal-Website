@@ -12,6 +12,17 @@ class MyApp extends App {
         <Head>
           <title>👋 Said Atrahouch </title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <script
+            async
+            defer
+            src="https://scripts.simpleanalyticscdn.com/latest.js"
+          ></script>
+          <noscript>
+            <img
+              src="https://queue.simpleanalyticscdn.com/noscript.gif"
+              alt=""
+            />
+          </noscript>
         </Head>
         <Component {...pageProps} />
       </React.Fragment>
