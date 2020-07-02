@@ -10,7 +10,7 @@
     "fmt": "prettier --check *.md ./*.{ts,tsx}"
   },
   "engines": {
-    "node": "12.4"
+    "node": "12.16"
   },
   "prettier": {
     "printWidth": 80,
