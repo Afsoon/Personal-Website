@@ -85,22 +85,31 @@ const ExperienceContent = () => (
             sistema de gestión de incidencias de mantenimiento.
           </li>
           <li className="pt-2">
+            Añadir a la configuración de Docker Compose Elastich Search y Kibana. Ya que es usado para guardar los logs de acceso e incidencias.
+          </li>
+          <li className="pt-2">
+            Integración con Pagerduty del microservicio del sistema de gestión de incidencias, como nuestra fuente de verdad.{' '}
+          </li>
+          <li className="pt-2">
+            Integración con SQS y SNS por los siguientes motivos:
+            <ul className="list-inside list-disc pl-4">
+              <li>Para no saturar la API Pagerduty.</li>
+              <li>Crear un sistemas de reintentos, donde si un mensaje pasa un umbral se considera muerto y require intervención manual.</li>
+              <li>Ser capaces de crecer horizontalmente.</li>
+              <li>La forma de comunicación entre la plataforma de la aplicación y el sistema de mantenimiento.</li>
+            </ul>
+          </li>
+          <li className="pt-2">
+            Desarrollo de un cron job para comprabar que incidencias no va a cumpliar su SLA, con los siguientes caracteristicas:
+            <ul className="list-inside list-disc pl-4">
+              <li>Lock distribuido con S3 en caso de que queramos escalar horizontalmente.</li>
+              <li>Crear nuevas incidencias en PagerDuty con prioridad alta de las incidencias cercanas a acabar su SLA.</li>
+              <li>Notificar de las incidencias que no ha cumplido su SLA.</li>
+            </ul>
+          </li>
+          <li className="pt-2">
             Desarrollo de la primera versión del nuevo dashboard de
             mantenimiento en React.
-          </li>
-          <li className="pt-2">
-            Integración con Pagerduty del microservicio del sistema de gestión
-            de incidencias.{' '}
-          </li>
-          <li className="pt-2">
-            Integración con SQS y SNS del microservicio de gestión de
-            incidencias con el objetivo de evitar saturar la API de Pagerduty,
-            así como la adición de un sistema de reintento, la posibilidad de
-            escalar horizontalmente y una forma de comunicación entre la
-            plataforma y el sistema de gestión de incidencias.
-          </li>
-          <li className="pt-2">
-            Actualización del nuevo dashboard de mantenimiento a React 16.
           </li>
           <li className="pt-2">
             Reducción a la mitad los tiempo de build de la plataforma tras el
