@@ -13,11 +13,7 @@ const AboutContent = () => (
       <p className="pt-4">
         Persona resolutiva, detallista y colaboradora . Interesado por la
         calistenia, el culturismo y otras actividades al aire libre. Apasionado
-        por viajar, cocinar y ver series de TV.
-      </p>
-      <p className="pt-4">
-        Actualmente, en busca de nuevas oportunidades laborales. Atraído tanto
-        por el desarrollo front como por el back.
+        por viajar y cocinar.
       </p>
     </div>
     <div className="flex-3/10 pb-4">
@@ -51,7 +47,7 @@ const AboutContent = () => (
               href="https://github.com/Afsoon/GameVoting"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline"
+              className="underline text-neutral-500"
             >
               Game Voting
             </a>

@@ -7,6 +7,31 @@ const ExperienceContent = () => (
     <h1 className="text-6xl text-support-positive-800">Experiencia Laboral</h1>
     <ol className="block md:flex pl-4 pr-4 pb-8">
       <li className="pt-4 md:flex-1/2 lg:flex-3/10">
+        <h2 className="text-3xl block">Mid-Senior Full Stack Developer - Redradix</h2>
+        <span className="text-sm block text-primary-400">
+          Febrero 2020 - Actual, Madrid
+        </span>
+        <ul className="list-inside list-disc pl-2">
+          <li className="pt-2">
+            Desarrollo del proyecto de <a className="underline text-neutral-500" href="https://conectamosvidas.com/" target="_blank"
+              rel="noopener noreferrer">ConectamosVidas</a>. Encargado de la parte validación, envíos de email y despligue en Digital Ocean.
+          </li>
+          <li className="pt-2">
+            Colaboración con Secuoyas en <a className="underline text-neutral-500" href=" https://coronavirus.secuoyas.com/visualizacion/" target="_blank"
+              rel="noopener noreferrer">dashboard de datos sobre el Covid</a>. Desarrollo de la gráfica de datos diarios por comunidades.
+          </li>
+          <li className="pt-2">
+            Auditoría de un proyecto de NodeJS que sincronizaba datos de un SQLServer con Salesforce con problemas de rendimiento. Preparación de una propuesta nueva de arquitectura al cliente.
+          </li>
+          <li className="pt-2">
+            Desarrollo de un WebComponent con Preact para una arquitectura de microfrontends.
+          </li>
+          <li className="pt-2">
+            Investigación sobre Next.js junto con Strapi para futuras propuestas de Landing Page.
+          </li>
+        </ul>
+      </li>
+      <li className="pt-4 md:flex-1/2 lg:flex-3/10">
         <h2 className="text-3xl block">Software Developer - Ride On</h2>
         <span className="text-sm block text-primary-400">
           Junio 2017 - Mayo 2019, Madrid
@@ -93,7 +118,7 @@ const ExperienceContent = () => (
         <p className="pt-4 pl-2 text-primary-300">
           <span className="font-bold text-white">
             Colaboración en el desarrollo de una ​aplicación web de sanidad para
-            ayudar a los codificadores​
+            ayudar a los codificadores
           </span>{' '}
           a detectar los diagnósticos, actual y previos de un informe médico y
           todos los procedimientos que se han realizado. Desarrollado con
@@ -105,7 +130,7 @@ const ExperienceContent = () => (
           <span className="font-bold text-white"> jQuery</span>.
         </p>
         <p className="pt-4 pl-2 text-primary-300">
-          En los últimos seis meses estuve en un proyecto que consistía en la ​
+          En los últimos seis meses estuve en un proyecto que consistía en la
           <span className="font-bold text-white">
             modernización del sistema de facturación
           </span>{' '}

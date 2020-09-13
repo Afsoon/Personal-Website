@@ -25,6 +25,9 @@ const skills = [
   'Kong',
   'GraphQL',
   'Rest',
+  'Redux',
+  'Redux-Sagas',
+  'Service Workers',
 ]
 
 const generalSkills = [
