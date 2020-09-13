@@ -102,7 +102,7 @@ const ExperienceContent = () => (
           <li className="pt-2">
             Desarrollo de un cron job para comprabar que incidencias no va a cumpliar su SLA, con los siguientes caracteristicas:
             <ul className="list-inside list-disc pl-4">
-              <li>Lock distribuido con DynamoDB en caso de que queramos escalar horizontalmente.</li>
+              <li>Lock distribuido con DynamoDB para escalar horizontalmente.</li>
               <li>Crear nuevas incidencias en PagerDuty con prioridad alta de las incidencias cercanas a acabar su SLA.</li>
               <li>Notificar de las incidencias que no ha cumplido su SLA.</li>
             </ul>
