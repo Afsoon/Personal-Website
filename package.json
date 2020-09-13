@@ -10,7 +10,7 @@
     "fmt": "prettier --check *.md ./*.{ts,tsx}"
   },
   "engines": {
-    "node": "12.16"
+    "node": "12.x"
   },
   "prettier": {
     "printWidth": 80,
@@ -19,30 +19,32 @@
     "trailingComma": "es5"
   },
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
-    "next": "9.3.2",
-    "react": "16.12.0",
-    "react-dom": "16.13.0"
+    "classnames": "^2.2.6",
+    "next": "9.5.3",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-transition-group": "^4.4.1"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.1.0",
-    "@types/node": "^13.11.0",
-    "@types/react": "^16.9.27",
-    "@types/react-dom": "^16.9.5",
-    "@typescript-eslint/eslint-plugin": "^2.26.0",
-    "@typescript-eslint/parser": "^2.26.0",
-    "autoprefixer": "^9.7.4",
-    "babel-eslint": "^10.0.3",
+    "@tailwindcss/typography": "^0.2.0",
+    "@types/node": "^14.10.1",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^4.1.0",
+    "autoprefixer": "^9.8.6",
+    "babel-eslint": "^10.1.0",
     "cssnano": "^4.1.10",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.1",
-    "eslint-config-react-app": "^5.1.0",
-    "eslint-plugin-flowtype": "^3.13.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^1.7.0",
-    "tailwindcss": "^1.2.0-canary.5",
-    "typescript": "^3.7.5"
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "postcss-100vh-fix": "^0.1.1",
+    "tailwindcss": "^1.8.8",
+    "typescript": "^4.0.2"
   }
 }

@@ -1,29 +1,32 @@
-module.exports= {
-  parser: '@typescript-eslint/parser',
+module.exports = {
   parserOptions: {
-    project: './tsconfig.json'
+    ecmaVersion: 2019,
+    ecmaFeatures: {
+      jsx: true
+    }
   },
   plugins: [
-    '@typescript-eslint',
     'jsx-a11y',
-    'react-hooks'
-  ],
+    'react-hooks'],
   extends: [
-    'react-app',
+    "react-app",
     'plugin:jsx-a11y/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-    'prettier/@typescript-eslint'
+    "eslint:recommended",
+    "plugin:jest/recommended",
+    "eslint-config-prettier"
   ],
   settings: {
-    react: {
-      version: 'detect'
+    "react": {
+      "version": "detect"
     }
   },
   rules: {
-    '@typescript-eslint/explicit-function-return-type': [
-      'off'
-    ],
+    "strict": ["error", "never"]
+  },
+  env: {
+    "browser": true,
+  },
+  rules: {
     'react/display-name': [
       0
     ],
@@ -32,5 +35,42 @@ module.exports= {
     ],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error'
-  }
+  },
+  overrides: [
+    {
+      files: "**/*.+(ts|tsx)",
+      parser: "@typescript-eslint/parser",
+      parserOptions: {
+        project: "./tsconfig.json",
+        ecmaFeatures: {
+          jsx: true
+        }
+      },
+      plugins: [
+        "@typescript-eslint/eslint-plugin",
+        'jsx-a11y',
+        'react-hooks'
+      ],
+      extends: [
+        "react-app",
+        'plugin:jsx-a11y/recommended',
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:eslint-config-prettier/@typescript-eslint"
+      ],
+      rules: {
+        '@typescript-eslint/explicit-function-return-type': [
+          'off'
+        ],
+        'react/display-name': [
+          0
+        ],
+        'react/prop-types': [
+          0
+        ],
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error'
+      }
+    }
+  ]
 }

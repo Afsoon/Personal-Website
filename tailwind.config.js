@@ -1,6 +1,10 @@
 const { colors, flex } = require('tailwindcss/defaultTheme')
 
 module.exports = {
+  future: {
+    purgeLayersByDefault: true,
+    removeDeprecatedGapUtilities: true
+  },
   theme: {
     inset: {
       '1/2': '50%',
@@ -60,5 +64,7 @@ module.exports = {
   variants: {
     textColor: ['responsive', 'hover', 'focus', 'group-hover'],
   },
-  plugins: []
+  plugins: [
+    require('@tailwindcss/typography')
+  ]
 }
