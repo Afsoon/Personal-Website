@@ -6380,10 +6380,10 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
-tailwindcss@^1.8.8:
-  version "1.8.8"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-1.8.8.tgz#f877fb8f001a6f1a7717431392b769952b66406d"
-  integrity sha512-MCaTFA+ae278rYeB0UTJAkWJMW5eYMMO6/XXBL0oo+SKuZCM4uCFskroHbMFvQSoA96sslFX2+tCPDOv1T7Tbw==
+tailwindcss@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-1.9.0.tgz#19caaca94656e2d5f038fa46e754d91e152e9609"
+  integrity sha512-RJJ7SRtmm1jBXzOm5It50NAX76251yW+XWISb2Y+kxgqwcCHq4RDor7elzeUChl/dIFvUMDsHb7LfiGtLs3qtg==
   dependencies:
     "@fullhuman/postcss-purgecss" "^2.1.2"
     autoprefixer "^9.4.5"
