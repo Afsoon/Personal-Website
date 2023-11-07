@@ -1,0 +1,83 @@
+---
+import Section from './Section.astro';
+
+const socialIcons = {
+  GitHub: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <rect width="24" height="24" fill="#fff" rx="6"/>
+    <g clip-path="url(#a)">
+      <path fill="#000" d="M12 5c3.867 0 7 3.133 7 7a7.012 7.012 0 0 1-4.769 6.641c-.35.07-.481-.148-.481-.332 0-.236.009-.989.009-1.925 0-.657-.219-1.077-.473-1.295 1.558-.175 3.194-.77 3.194-3.457 0-.77-.271-1.39-.718-1.88.07-.176.316-.893-.07-1.856 0 0-.586-.192-1.925.718a6.495 6.495 0 0 0-1.75-.237c-.595 0-1.19.08-1.75.237-1.338-.902-1.925-.718-1.925-.718-.385.963-.14 1.68-.07 1.855a2.724 2.724 0 0 0-.717 1.882c0 2.677 1.627 3.28 3.185 3.456-.201.175-.385.481-.446.936-.403.184-1.409.481-2.039-.577-.131-.21-.525-.727-1.076-.718-.587.009-.237.332.008.464.298.166.64.787.718.989.14.393.595 1.146 2.354.822 0 .586.008 1.137.008 1.304 0 .183-.13.393-.48.332A6.996 6.996 0 0 1 5 12c0-3.867 3.133-7 7-7Z"/>
+    </g>
+    <defs>
+      <clipPath id="a">
+        <path fill="#fff" d="M5 5h14v14H5z"/>
+      </clipPath>
+    </defs>
+  </svg>`,
+  LinkedIn: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <rect width="24" height="24" fill="#0A66C2" rx="6"/>
+    <path fill="#fff" d="M17.95 5H6.05A1.05 1.05 0 0 0 5 6.05v11.9A1.05 1.05 0 0 0 6.05 19h11.9A1.05 1.05 0 0 0 19 17.95V6.05A1.05 1.05 0 0 0 17.95 5ZM9.2 16.9H7.1v-6.3h2.1v6.3ZM8.15 9.375A1.225 1.225 0 1 1 9.41 8.15a1.246 1.246 0 0 1-1.26 1.225ZM16.9 16.9h-2.1v-3.318c0-.994-.42-1.351-.966-1.351a1.218 1.218 0 0 0-1.134 1.302.459.459 0 0 0 0 .098V16.9h-2.1v-6.3h2.03v.91a2.177 2.177 0 0 1 1.89-.98c1.085 0 2.352.602 2.352 2.562L16.9 16.9Z"/>
+  </svg>`,
+} as const;
+
+const socialLinks: Record<SocialIconsType, string> = {
+  GitHub: "https://github.com/afsoon",
+  LinkedIn: "https://linkedin.com/said-atrahouch"
+}
+
+type SocialIconsType = keyof typeof socialIcons;
+---
+
+<Section title='Links'>
+	<ul class="list">
+		{Object.keys(socialIcons).map((socialIcon) => {
+      const link = socialLinks[socialIcon as SocialIconsType]
+      return <li class="list_item">
+        <div class="icon">
+          <Fragment set:html={socialIcons[socialIcon as SocialIconsType]} />
+        </div>
+        <div class="website_information">
+          <h4 class="website_name">{socialIcon}</h4>
+          <a class="website_link" href=`${link}` target="_blank">{link}</a>
+        </div>
+      </li>
+    })}
+	</ul>
+</Section>
+
+<style>
+	.icon {
+		--svg-size: 48px;
+		width: var(--svg-size);
+		height: var(--svg-size);
+		align-self: center;
+	}
+
+	.list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		list-style-position: inside;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.list_item {
+		display: flex;
+		gap: 1rem;
+	}
+
+	.website_information {
+		color: #545454;
+	}
+
+	.website_link,
+	.website_link:visited {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	.website_link:hover {
+		text-decoration: underline;
+	}
+</style>

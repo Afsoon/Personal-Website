@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Section from '../components/Section.astro';
+import Links from '../components/Links.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -11,12 +12,18 @@ import Section from '../components/Section.astro';
 	<main>
 		<div class="column">
 			<Section title='statement'>
-			<p>I'm a software engineer with over 9 years of experience crafting delightful and engaging products. My passion lies in designing user-centered experiences that are snappy, enjoyable, and easy to use.</p>
-			<p>I strive to create digital products that are simple, user-friendly, and lightning-fast.</p>
-		</Section>
+				<p>I'm a software engineer with over 9 years of experience crafting delightful and engaging products. My passion lies in designing user-centered experiences that are snappy, enjoyable, and easy to use.</p>
+				<p>I strive to create digital products that are simple, user-friendly, and lightning-fast.</p>
+			</Section>
+			<Links />
+			<Section title='education'>
+				TBA
+			</Section>
 		</div>
 		<div class="column">
-BY
+			<Section title='Work Experience'>
+				TBA
+			</Section>
 		</div>
 	</main>
 </Layout>
@@ -26,6 +33,7 @@ BY
 		font-size: 20px;
 		line-height: 1.6;
 		display: flex;
+		gap: 2rem
 	}
 
 	header {
@@ -33,6 +41,9 @@ BY
 	}
 	.column {
 		flex: 0 0 50%;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
 	}
 	h1 {
 		font-size: 2rem;
