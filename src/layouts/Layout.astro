@@ -34,7 +34,7 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: white;
 		background-size: 224px;
 	}
 	code {
@@ -47,5 +47,47 @@ const { title } = Astro.props;
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
+	}
+	*, *::before, *::after {
+	  box-sizing: border-box;
+	}
+	* {
+	  margin: 0;
+	}
+	body {
+	  line-height: 1.5;
+	  -webkit-font-smoothing: antialiased;
+		min-height: 100dvh;
+		text-rendering: optimizeSpeed;
+		width: 100%;
+		max-width: calc(80ch + 64px);
+		margin: auto;
+	}
+	img, picture, video, canvas, svg {
+	  display: block;
+	  max-width: 100%;
+	}
+	input, button, textarea, select {
+	  font: inherit;
+	}
+	p, h1, h2, h3, h4, h5, h6 {
+	  overflow-wrap: break-word;
+	}
+	#root, #__next {
+	  isolation: isolate;
+	}
+	@media (prefers-reduced-motion: reduce) {
+	  html:focus-within {
+	   scroll-behavior: auto;
+	  }
+
+	  *,
+	  *::before,
+	  *::after {
+	    animation-duration: 0.01ms !important;
+	    animation-iteration-count: 1 !important;
+	    transition-duration: 0.01ms !important;
+	    scroll-behavior: auto !important;
+	  }
 	}
 </style>

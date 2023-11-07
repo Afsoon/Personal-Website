@@ -1,0 +1,41 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="section">
+  <h3 class="section_title">{title}</h3>
+  <div class="section_description">
+    <slot>
+  </div>
+</div>
+
+<style>
+	.section {
+		display: flex;
+		gap: 0.75rem;
+	}
+
+	.section_description {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		color: #545454;
+	}
+	.section_title {
+		text-transform: uppercase;
+		font-size: 0.75rem;
+		line-height: var(--text-height);
+		font-weight: 500;
+		top: 0;
+		left: 0;
+		writing-mode: vertical-lr;
+		text-orientation: upright;
+		letter-spacing: 0.03rem;
+		padding-top: 0.5rem;
+		color: #545454;
+	}
+</style>
