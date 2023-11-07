@@ -1,6 +1,4 @@
 ---
-import Section from './Section.astro';
-
 const socialIcons = {
   GitHub: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
     <rect width="24" height="24" fill="#fff" rx="6"/>
@@ -32,26 +30,15 @@ type SocialIconsType = keyof typeof socialIcons;
 		{Object.keys(socialIcons).map((socialIcon) => {
       const link = socialLinks[socialIcon as SocialIconsType]
       return <li class="list_item">
-        <div class="icon">
+        <DescriptionAndIcon name={socialIcon} href={link}>
           <Fragment set:html={socialIcons[socialIcon as SocialIconsType]} />
-        </div>
-        <div class="website_information">
-          <h4 class="website_name">{socialIcon}</h4>
-          <a class="website_link" href=`${link}` target="_blank">{link}</a>
-        </div>
+        </DescriptionAndIcon>
       </li>
     })}
 	</ul>
 </Section>
 
 <style>
-	.icon {
-		--svg-size: 48px;
-		width: var(--svg-size);
-		height: var(--svg-size);
-		align-self: center;
-	}
-
 	.list {
 		list-style: none;
 		margin: 0;
