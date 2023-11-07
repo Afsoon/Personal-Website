@@ -7,21 +7,24 @@ interface Props {
     icon: string;
     name: string;
     href: string;
-  }[]
+  }[];
+  title: string;
 }
 
-const { data } = Astro.props;
+const { data, title } = Astro.props;
 ---
 
-<ul class="list">
-  {data.map(({icon, name, href}) => {
-    return <li class="list_item">
-      <DescriptionAndIcon name={name} href={href}>
-        {icon}
-      </DescriptionAndIcon>
-    </li>
-  })}
-</ul>
+<Section title={title}>
+	<ul class="list">
+		{data.map(({icon, name, href}) => {
+			return <li class="list_item">
+				<DescriptionAndIcon name={name} href={href}>
+					{icon}
+				</DescriptionAndIcon>
+			</li>
+		})}
+	</ul>
+</Section>
 
 <style>
 	.list {

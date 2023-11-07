@@ -1,4 +1,5 @@
 ---
+import SectionWithLinks from "./SectionWithLinks.astro";
 const socialIcons = {
   GitHub: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
     <rect width="24" height="24" fill="#fff" rx="6"/>
@@ -25,46 +26,18 @@ const socialLinks: Record<SocialIconsType, string> = {
 type SocialIconsType = keyof typeof socialIcons;
 ---
 
-<Section title='Links'>
-	<ul class="list">
-		{Object.keys(socialIcons).map((socialIcon) => {
-      const link = socialLinks[socialIcon as SocialIconsType]
-      return <li class="list_item">
-        <DescriptionAndIcon name={socialIcon} href={link}>
-          <Fragment set:html={socialIcons[socialIcon as SocialIconsType]} />
-        </DescriptionAndIcon>
-      </li>
-    })}
-	</ul>
-</Section>
+<SectionWithLinks title="Links" data={
+	[
+		{
+			name: "GitHub",
+			href: socialLinks["GitHub"],
+			icon: <Fragment set:html={socialIcons["GitHub"]} />
+		},
+		{
+			name: "LinkedIn",
+			href: socialLinks["LinkedIn"],
+			icon: <Fragment set:html={socialIcons["LinkedIn"]} />
+		},
+	]
+} />
 
-<style>
-	.list {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		list-style-position: inside;
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-	}
-
-	.list_item {
-		display: flex;
-		gap: 1rem;
-	}
-
-	.website_information {
-		color: #545454;
-	}
-
-	.website_link,
-	.website_link:visited {
-		text-decoration: none;
-		color: inherit;
-	}
-
-	.website_link:hover {
-		text-decoration: underline;
-	}
-</style>
