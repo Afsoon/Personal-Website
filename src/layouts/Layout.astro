@@ -60,7 +60,7 @@ const { title } = Astro.props;
 		min-height: 100dvh;
 		text-rendering: optimizeSpeed;
 		width: 100%;
-		max-width: calc(80ch + 64px);
+		max-width: calc(100ch + 64px);
 		margin: auto;
 		padding-top: 1rem;
 	}
@@ -73,9 +73,10 @@ const { title } = Astro.props;
 	}
 	p, h1, h2, h3, h4, h5, h6 {
 	  overflow-wrap: break-word;
+		text-wrap: balance;
 	}
-	#root, #__next {
-	  isolation: isolate;
+	.circle {
+		border-radius: 50%;
 	}
 	@media (prefers-reduced-motion: reduce) {
 	  html:focus-within {

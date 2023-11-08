@@ -1,0 +1,105 @@
+---
+interface Props {
+  workEntry: {
+    title: string;
+    company: string;
+    startDate: string;
+    endDate: string;
+    location: string;
+    summary: string[],
+    icon: string;
+  }
+}
+
+const { workEntry } = Astro.props;
+---
+
+<li class="job_entry">
+  <div class="logo_container">
+    <Fragment set:html={workEntry.icon} />
+  </div>
+  <div class="header">
+    <div class="header_title">
+      <h4>{workEntry.title}</h4>
+      <div class="dot" aria-hidden="true" />
+      <span>{workEntry.company}</span>
+    </div>
+    <div class="header_time">
+      <div class="header_time_bg">
+        {workEntry.startDate} -> {workEntry.endDate}
+      </div>
+      <span>{workEntry.location}</span>
+    </div>
+  </div>
+  <ul class="content">
+    {workEntry.summary.map((item) => {
+      return <li>
+        {item}
+        </li>
+    })}
+  </ul>
+</li>
+
+<style>
+
+.job_entry {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: max-content 1fr;
+  grid-template-areas: 'logo header'
+  'content content';
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 99999999999px;
+  background-color: hsla(50, 3%, 36%, 1);
+  display: inline-block;
+  align-self: center;
+}
+
+.logo_container {
+  grid-area: logo;
+  align-self: center;
+  --logo-size: 4rem;
+  width: var(--logo-size);
+  height: var(--logo-size);
+}
+
+.logo_container > img,
+.logo_container > svg {
+  border-radius: 50%;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+}
+
+.header_title {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.header_time {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.header_time_bg {
+  padding: 0.25rem;
+  background-color: hsla(50, 3%, 86%, 1);
+  border-radius: 12px;
+}
+
+.content {
+  grid-area: content;
+  list-style-position: inside;
+  padding: 0;
+}
+</style>

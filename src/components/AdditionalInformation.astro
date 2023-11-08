@@ -1,0 +1,26 @@
+---
+import Section from '../components/Section.astro';
+import TagList from './TagList.astro';
+
+const Interests = [
+	"Developer Experience",
+  "Startups",
+  "Videogames",
+  "Fitness",
+  "Diversity",
+
+]
+
+const Learning = [
+	"Accessability",
+	"Kubernetes",
+  "Framer Motion",
+  "Typescript"
+]
+
+---
+
+<Section title='Additional Information'>
+  <TagList title='Interests' data={Interests} />
+  <TagList title='Currently learning' data={Learning} />
+</Section>

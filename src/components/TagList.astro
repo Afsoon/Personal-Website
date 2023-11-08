@@ -1,0 +1,40 @@
+---
+interface Props {
+  title: string;
+  data: string[]
+}
+
+const { data, title } = Astro.props;
+
+---
+
+<div>
+  <h4>{title}</h4>
+  <ul class="list_skills">
+    {data.map((skill) => {
+      return <li class="list_skills_element">
+        {skill}
+      </li>
+    })}
+  </ul>
+</div>
+
+<style>
+	.list_skills {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		list-style-position: inside;
+		display: flex;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+	}
+
+	.list_skills_element {
+		display: flex;
+		gap: 1rem;
+		background-color: hsla(50, 3%, 86%, 1);
+		padding: 0.25rem;
+		border-radius: 0.5rem;
+	}
+</style>

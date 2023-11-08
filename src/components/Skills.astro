@@ -1,0 +1,40 @@
+---
+import Section from '../components/Section.astro';
+import TagList from './TagList.astro';
+
+const FrontendSkills = [
+	"HTML/CSS/JS",
+	"Typescript",
+	"React",
+	"NodeJS",
+	"Remix",
+	"RadixUI",
+	"TailwindCSS",
+	"Storybook",
+	"Playwright",
+]
+
+const BackendSkills = [
+	"Golang",
+	"NodeJS",
+	"Drizzle",
+	"PostgreSQL",
+	"REST",
+]
+
+const GeneralSkills = [
+	"Unit Testing",
+	"E2E",
+	"Docker",
+	"Terraform",
+	"K8s",
+	"Git"
+]
+
+---
+
+<Section title='Skills'>
+  <TagList title='Frontend' data={FrontendSkills} />
+  <TagList title='Backend' data={BackendSkills} />
+  <TagList title='Ops' data={GeneralSkills} />
+</Section>
