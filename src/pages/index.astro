@@ -6,18 +6,11 @@ import Education from '../components/Education.astro';
 import Skills from '../components/Skills.astro';
 import AdditionalInformation from '../components/AdditionalInformation.astro';
 import WorkExperience from '../components/WorkExperience.astro';
+import Header from '../components/Header.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	<header>
-		<div>
-			<h1>Said Atrahouch Echarrouti</h1>
-			<h2>Senior Software Engineer</h2>
-		</div>
-		<div class="container">
-			<h3 class="title">Languages</h3>: <span>Spanish</span> & <span>English</span>
-		</div>
-	</header>
+	<Header />
 	<main>
 		<div class="column_1">
 			<Section title='statement'>
@@ -41,59 +34,6 @@ import WorkExperience from '../components/WorkExperience.astro';
 		line-height: 1.6;
 		display: flex;
 		gap: 2rem
-	}
-
-	.list_jobs {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		list-style-position: inside;
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-	}
-
-	.container {
-		font-size: 1rem;
-		display: flex;
-		justify-content: baseline;
-		gap: 0.25rem;
-	}
-	.title {
-		text-transform: uppercase;
-		font-weight: 500;
-		letter-spacing: 0.03rem;
-		color: #545454;
-	}
-
-	.content {
-
-	}
-
-
-	.list_languages {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		list-style-position: inside;
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		flex-wrap: wrap;
-	}
-
-	.list_languages_element {
-		display: flex;
-		gap: 1rem;
-		background-color: hsla(50, 3%, 86%, 1);
-		padding: 0.25rem;
-		border-radius: 0.5rem;
-	}
-
-	header {
-		margin-bottom: 16px;
-		display: flex;
-		gap: 1rem;
 	}
 	.column_1 {
 		flex: 1 1 40ch;
