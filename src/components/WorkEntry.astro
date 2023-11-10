@@ -106,4 +106,9 @@ const { workEntry } = Astro.props;
   list-style-position: inside;
   padding: var(--space-0);
 }
+
+.content li::marker {
+  color: hsl(var(--accent-dark));
+  content: '•';
+}
 </style>
