@@ -30,26 +30,26 @@ import Header from '../components/Header.astro';
 
 <style>
 	main {
-		font-size: 20px;
+		font-size: var(--text-size);
 		line-height: 1.6;
 		display: flex;
-		gap: 2rem
+		gap: var(--space-8);
 	}
 	.column_1 {
-		flex: 1 1 40ch;
+		flex: 1 1 var(--column-1);
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
+		gap: var(--space-8);
 	}
 
 	.column_2 {
-		flex: 1 1 60ch;
+		flex: 1 1 var(--column-2);
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
+		gap: var(--space-8);
 	}
 	h1 {
-		font-size: 2rem;
+		font-size: var(--text-l);
 		font-weight: 700;
 		line-height: 1;
 		text-align: left;

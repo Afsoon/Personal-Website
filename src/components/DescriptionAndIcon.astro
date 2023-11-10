@@ -25,29 +25,29 @@ const { name, href } = Astro.props;
 
 	.list {
 		list-style: none;
-		margin: 0;
-		padding: 0;
+		margin: var(--space-0);
+		padding: var(--space-0);
 		list-style-position: inside;
 		display: flex;
 		flex-direction: column;
-		gap: 0.5rem;
+		gap: var(--space-2);
 	}
 
 	.list_item {
 		display: flex;
-		gap: 1rem;
+		gap: var(--space-4);
 	}
 
 	.website_name {
 		word-break: break-all;
-    overflow: hidden;
-    text-overflow: ellipsis;
+		white-space: pre-wrap;
+		word-break: break-all;
 	}
 
 	.website_information {
-		color: #545454;
+		color: hsl(--accent);
 		flex: 0 0 auto;
-		width: calc(40ch - 48px - 10ch);
+		width: calc(var(--column-1) - var(--space-6) * 2 - 10ch);
 	}
 
 	.website_link,
@@ -56,8 +56,6 @@ const { name, href } = Astro.props;
 		color: inherit;
 		white-space: pre-wrap;
 		word-break: break-all;
-    overflow: hidden;
-    text-overflow: ellipsis;
 	}
 
 	.website_link:hover {

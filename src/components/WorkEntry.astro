@@ -22,7 +22,7 @@ const { workEntry } = Astro.props;
     <div class="header_title">
       <h4>{workEntry.title}</h4>
       <div class="dot" aria-hidden="true" />
-      <span>{workEntry.company}</span>
+      <span class="header_location">{workEntry.company}</span>
     </div>
     <div class="header_time">
       <div class="header_time_bg">
@@ -48,14 +48,14 @@ const { workEntry } = Astro.props;
   grid-template-rows: max-content 1fr;
   grid-template-areas: 'logo header'
   'content content';
-  gap: 0.5rem;
+  gap: var(--space-2);
 }
 
 .dot {
   width: 4px;
   height: 4px;
   border-radius: 99999999999px;
-  background-color: hsla(50, 3%, 36%, 1);
+  background-color: hsl(var(--accent-dark));
   display: inline-block;
   align-self: center;
 }
@@ -81,25 +81,29 @@ const { workEntry } = Astro.props;
 
 .header_title {
   display: flex;
-  gap: 0.5rem;
+  gap: var(--space-2);
   align-items: center;
 }
 
 .header_time {
   display: flex;
-  gap: 0.5rem;
+  gap: var(--space-2);
   align-items: center;
 }
 
 .header_time_bg {
-  padding: 0.25rem;
-  background-color: hsla(50, 3%, 86%, 1);
+  padding: var(--space-1);
+  background-color: hsl(var(--tag-bg));
   border-radius: 12px;
+}
+
+.header_location {
+  color: hsla(var(--accent-light), 0.8)
 }
 
 .content {
   grid-area: content;
   list-style-position: inside;
-  padding: 0;
+  padding: var(--space-0);
 }
 </style>
