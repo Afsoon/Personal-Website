@@ -2,16 +2,17 @@
 interface Props {
   name: string;
 	href: string;
+	external: boolean;
 }
 
-const { name, href } = Astro.props;
+const { name, href, external } = Astro.props;
 ---
 
 <div class="icon">
   <slot />
 </div>
 <div class="website_information">
-	<a aria-label={`personal-link-${name}`} class="website_link" href=`${href}` target="_blank"></a>
+	<a aria-label={`personal-link-${name}`} class="website_link" href=`${href}` target={external ? "_blank" : "_self"}></a>
 	<h4 id={`personal-link-${name}`} class="website_name">{name}</h4>
 </div>
 

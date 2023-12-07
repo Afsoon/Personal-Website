@@ -51,7 +51,7 @@ type SocialIconsType = keyof typeof socialIcons;
 	<nav class="list">
 		{Object.entries(links).map(([key, { href, external }]) => {
 			return <div class="list_item">
-				<PersonalDescriptionAndIcon name={key} href={href}>
+				<PersonalDescriptionAndIcon name={key} href={href} external={external}>
 					<Fragment set:html={socialIcons[key as keyof typeof socialIcons]} />
 				</PersonalDescriptionAndIcon>
 			</div>
