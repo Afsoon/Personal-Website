@@ -11,7 +11,8 @@ const { name, href } = Astro.props;
   <slot />
 </div>
 <div class="website_information">
-  <a class="website_link" href=`${href}` target="_blank"><h4 class="website_name">{name}</h4></a>
+	<a aria-label={`personal-link-${name}`} class="website_link" href=`${href}` target="_blank"></a>
+	<h4 id={`personal-link-${name}`} class="website_name">{name}</h4>
 </div>
 
 <style>
@@ -22,11 +23,15 @@ const { name, href } = Astro.props;
 		align-self: center;
 		flex: 0 0 auto;
 	}
+	.website_name {
+		word-break: break-all;
+		white-space: pre-wrap;
+		word-break: break-all;
+	}
 
 	.website_information {
 		color: hsl(--accent);
 		flex: 0 0 auto;
-		width: calc(var(--column-1) - var(--space-6) * 2 - 10ch);
 	}
 
 	.website_link,
@@ -35,9 +40,16 @@ const { name, href } = Astro.props;
 		color: inherit;
 		white-space: pre-wrap;
 		word-break: break-all;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		inset: 0;
+		z-index: 1;
 	}
 
-	.website_link:hover {
+	.website_link:hover + .website_name {
 		text-decoration: underline;
 	}
+
+
 </style>

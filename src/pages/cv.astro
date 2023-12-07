@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import Links from '../components/CVLinks.astro';
+import Education from '../components/Education.astro';
+import Skills from '../components/Skills.astro';
+import AdditionalInformation from '../components/AdditionalInformation.astro';
+import WorkExperience from '../components/WorkExperience.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="Said Atrahouch CV.">
+	<Header />
+	<main class="container">
+		<div class="cv_container">
+			<div class="column_1">
+				<Section title='statement'>
+					<p>I'm a software engineer with over 9 years of experience crafting delightful and engaging products. My passion lies in designing user-centered experiences that are snappy, enjoyable, and easy to use.</p>
+					<p>I strive to create digital products that are simple, user-friendly, and lightning-fast.</p>
+				</Section>
+				<Links />
+				<Education />
+				<Skills />
+				<AdditionalInformation />
+			</div>
+			<div class="column_2">
+				<WorkExperience />
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	:root {
+		--flex-direction: column;
+	}
+
+	.container {
+		container-type: inline-size;
+		container-name: columns;
+	}
+	.cv_container {
+		font-size: var(--text-size);
+		line-height: 1.6;
+		display: flex;
+		flex-direction: column-reverse;
+		gap: var(--space-8);
+	}
+
+	@container columns (min-width: 900px) {
+		.cv_container {
+			flex-direction: row;
+		}
+	}
+	.column_1 {
+		flex: 1 1 var(--column-1);
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-8);
+	}
+
+	.column_2 {
+		flex: 1 1 var(--column-2);
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-8);
+	}
+	h1 {
+		font-size: var(--text-l);
+		font-weight: 700;
+		line-height: 1;
+		text-align: left;
+	}
+</style>
