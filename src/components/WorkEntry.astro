@@ -8,6 +8,7 @@ interface Props {
     location: string;
     summary: string[],
     icon: string;
+    websiteUrl: string;
   }
 }
 
@@ -22,7 +23,7 @@ const { workEntry } = Astro.props;
     <div class="header_title">
       <h4>{workEntry.title}</h4>
       <div class="dot" aria-hidden="true" />
-      <span class="header_location">{workEntry.company}</span>
+      <a href={workEntry.websiteUrl} target="_blank" class="header_location">{workEntry.company}</a>
     </div>
     <div class="header_time">
       <div class="header_time_bg">
@@ -98,7 +99,12 @@ const { workEntry } = Astro.props;
 }
 
 .header_location {
-  color: hsla(var(--accent-light), 0.8)
+  color: hsla(var(--accent-light), 0.8);
+  text-decoration: none;
+}
+
+.header_location:hover {
+  text-decoration: underline;
 }
 
 .content {
