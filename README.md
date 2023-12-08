@@ -1,26 +1,21 @@
 # Personal-Website
 
-The objective of this repositoty is to have a personal website to expand my Curriculm Vitae, showcase my side projects and a website to try new technoligies to develop website.
+Welcome to the repository of my website. I'm building this website to expand my resume, showcase my skills, and let visitors see what I'm focusing on right now.
 
-This is the first version, it has the minimum to make it public, the following steps are:
+The website is under a redesign and active development at this moment of writing. Instead of trying to implement everything and deploy, I will iterate. The roadmap is the following:
 
-- [x] Reponsive Design.
-- [x] Spanish texts.
-- [x] CD with Now.
-- [ ] English texts and I18n.
-- [ ] Responsive images for side projects.
-- [ ] Create the preview for the social media and sharing.
-- [ ] Improve the current design.
-- [ ] A11y.
+- [X] Home page with some links
+- [X] Resume page updated to December 2023
+- [ ] Each work entry has its route where you can read my experience in more detail.
+- [ ] Side projects
+- [ ] Final Design
 
-During the time can appear new issues that I have to fix before to the next version.
+Before:
 
-For the next version, the following steps are the minimum required:
+![Alt text](before.png)
 
-- [ ] New logo.
-- [ ] Books Page.
-- [ ] New Desgin with Light/Dark Theme.
-- [ ] Uses Page.
-- [ ] A11y.
+After:
+
+![Alt text](after.png)
 
 Developed with ❤️ by Said.
