@@ -1,0 +1,45 @@
+---
+import Section from './Section.astro';
+import DescriptionAndIcon from './DescriptionAndIcon.astro';
+
+interface Props {
+  data: {
+    icon: string;
+    name: string;
+    href: string;
+  }[];
+  title: string;
+}
+
+const { data, title } = Astro.props;
+---
+
+<Section title={title}>
+	<ul class="list">
+		{data.map(({icon, name, href}) => {
+			return <li class="list_item">
+				<DescriptionAndIcon name={name} href={href}>
+					<Fragment set:html={icon} />
+				</DescriptionAndIcon>
+			</li>
+		})}
+	</ul>
+</Section>
+
+<style>
+	.list {
+		list-style: none;
+		margin: var(--space-0);
+		padding: var(--space-0);
+		list-style-position: inside;
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-2);
+	}
+
+	.list_item {
+		display: flex;
+		gap: var(--space-4);
+    align-items: center;
+	}
+</style>

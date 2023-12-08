@@ -1,0 +1,43 @@
+---
+interface Props {
+  name: string;
+	href: string;
+}
+
+const { name, href } = Astro.props;
+---
+
+<div class="icon">
+  <slot />
+</div>
+<div class="website_information">
+  <a class="website_link" href=`${href}` target="_blank"><h4 class="website_name">{name}</h4></a>
+</div>
+
+<style>
+	.icon {
+		--svg-size: 48px;
+		width: var(--svg-size);
+		height: var(--svg-size);
+		align-self: center;
+		flex: 0 0 auto;
+	}
+
+	.website_information {
+		color: hsl(--accent);
+		flex: 0 0 auto;
+		width: calc(var(--column-1) - var(--space-6) * 2 - 10ch);
+	}
+
+	.website_link,
+	.website_link:visited {
+		text-decoration: none;
+		color: inherit;
+		white-space: pre-wrap;
+		word-break: break-all;
+	}
+
+	.website_link:hover {
+		text-decoration: underline;
+	}
+</style>

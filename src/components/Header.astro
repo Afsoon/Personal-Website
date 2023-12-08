@@ -1,0 +1,68 @@
+<header>
+	<div class="header_information">
+  <h1>Said Atrahouch Echarrouti</h1>
+  <h2>Software Engineer</h2>
+  <div class="container_title">
+    <span class="title">Languages:</span> <strong>Spanish</strong>, <strong>English</strong>
+  </div>
+	</div>
+</header>
+
+<style>
+	.header_information {
+		margin-bottom: var(--space-4);
+		display: grid;
+		column-gap: var(--space-4);
+    row-gap: var(--space-1);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 'name'
+    'description'
+		'languages';
+	}
+	header {
+		container-type: inline-size;
+		container-name: header;
+		padding-left: var(--space-5);
+	}
+
+	@container header (min-width: 650px) {
+		.header_information {
+			grid-template-columns: max-content max-content 1fr;
+    	grid-template-rows: max-content 1fr;
+    	grid-template-areas: 'name languages placeholder1'
+    		'description placeholder2 placeholder3';
+		}
+	}
+
+  h1 {
+		font-size: 2rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: left;
+    grid-area: name;
+		color: hsl(var(--accent-dark))
+	}
+
+  h2 {
+    grid-area: description;
+    color: hsl(var(--accent));
+  }
+
+	.container_title {
+    grid-area: languages;
+		font-size: 1rem;
+		color: hsla(var(--accent));
+		display: inline-flex;
+		gap: var(--space-1);
+		align-items: center;
+		text-transform: uppercase;
+	}
+
+	.title {
+		text-transform: uppercase;
+		font-weight: 500;
+		letter-spacing: 0.03rem;
+		color: var(--accent-light);
+	}
+</style>
