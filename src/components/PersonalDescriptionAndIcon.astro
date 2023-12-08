@@ -12,8 +12,8 @@ const { name, href, external } = Astro.props;
   <slot />
 </div>
 <div class="website_information">
-	<a aria-label={`personal-link-${name}`} class="website_link" href=`${href}` target={external ? "_blank" : "_self"}></a>
-	<h4 id={`personal-link-${name}`} class="website_name">{name}</h4>
+	<a class="website_link" href=`${href}` target={external ? "_blank" : "_self"}><span class="sr-only">{name}</span></a>
+	<h4 class="website_name">{name}</h4>
 </div>
 
 <style>
